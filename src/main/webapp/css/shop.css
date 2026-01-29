@@ -1,0 +1,178 @@
+/*
+    Created on : 29-Jan-2026
+    Author     : root
+*/
+
+/* =========================
+   TOP BAR
+========================= */
+.top-bar {
+    width: 80%;
+    margin: 30px auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #222;
+}
+
+.top-bar a {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.top-bar a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+.product-grid {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+    gap: 20px;
+}
+
+/* =========================
+   PRODUCT CARD (SQUARE)
+========================= */
+.product-card {
+    height: 320px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+.product-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+/* =========================
+   PRODUCT DETAILS
+========================= */
+.product-card h3 {
+    margin: 8px 0 4px;
+    font-size: 16px;
+    color: #222;
+    text-align: center;
+}
+
+.product-card p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #444;
+    text-align: center;
+}
+
+/* =========================
+   FORM & INPUTS
+========================= */
+.product-card form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.product-card input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* =========================
+   ADD TO CART BUTTON
+========================= */
+.product-card button {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-card button:hover {
+    background-color: #218838;
+    transform: scale(1.08);
+}
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+p {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .top-bar,
+    .product-grid {
+        width: 95%;
+    }
+
+    .product-card {
+        height: auto;
+        padding: 18px;
+    }
+
+    .product-card img {
+        width: 160px;
+        height: 160px;
+    }
+}
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 per row on mobile */
+    }
+}
