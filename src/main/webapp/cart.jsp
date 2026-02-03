@@ -14,6 +14,7 @@
     <meta charset="UTF-8">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
 </head>
 <body>
 <header>
@@ -72,7 +73,7 @@
 
     <div style="text-align:center; margin-top:20px;">
         <button type="submit" name="update" class="update-btn">Update Cart</button>
-        <a href="OrderServlet" class="checkout-btn" style="text-decoration:none; padding:10px 20px; color:white; border-radius:3px;">Checkout</a>
+        <a href="checkout.jsp" class="checkout-btn" style="text-decoration:none; padding:10px 20px; color:white; border-radius:3px;">Checkout</a>
     </div>
 </form>
 

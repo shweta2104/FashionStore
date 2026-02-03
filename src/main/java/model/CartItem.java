@@ -1,14 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
-/**
- *
- * @author root
- */
 public class CartItem {
+
     private Product product;
     private int quantity;
 
@@ -17,6 +10,7 @@ public class CartItem {
         this.quantity = quantity;
     }
 
+    // Existing Getters/Setters
     public Product getProduct() {
         return product;
     }
@@ -33,9 +27,34 @@ public class CartItem {
         this.quantity = quantity;
     }
 
+    // ✅ Subtotal Calculation
     public double getSubtotal() {
         double price = product.getPrice();
         double discount = product.getDiscount();
         return quantity * price * (1 - discount / 100.0);
+    }
+
+    // ====================================================
+    // ✅ REQUIRED METHODS FOR CHECKOUT (DAO SUPPORT)
+    // ====================================================
+
+    // Product ID
+    public int getProductId() {
+        return product.getProductId();
+    }
+
+    // Product Price
+    public double getPrice() {
+        return product.getPrice();
+    }
+
+    // Product Discount
+    public double getDiscount() {
+        return product.getDiscount();
+    }
+
+    // Product Name (Optional, useful for bill display)
+    public String getProductName() {
+        return product.getProductName();
     }
 }

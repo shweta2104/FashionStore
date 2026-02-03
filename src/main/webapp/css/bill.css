@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    padding: 20px;
+}
+
+h2 {
+    color: darkblue;
+}
+
+.bill-box {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.bill-box p {
+    font-size: 18px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: gray;
+}
+
+a {
+    text-decoration: none;
+}

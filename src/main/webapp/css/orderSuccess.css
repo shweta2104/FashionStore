@@ -1,0 +1,86 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 03-Feb-2026, 11:18:38 am
+    Author     : root
+*/
+
+/* ============================= */
+/* Order Success Page Styling    */
+/* ============================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Heading */
+h2 {
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Center Box */
+center {
+    background: white;
+    width: 60%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Thank You Message */
+h3 {
+    font-size: 22px;
+    color: #333;
+}
+
+/* Paragraph Text */
+p {
+    font-size: 18px;
+    color: #444;
+    margin: 10px 0;
+}
+
+/* Buttons Links */
+a {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+/* Continue Shopping Button */
+a[href="shop.jsp"] {
+    background-color: #007bff;
+    color: white;
+}
+
+a[href="shop.jsp"]:hover {
+    background-color: #0056b3;
+}
+
+/* Back to Cart Button */
+a[href="cart.jsp"] {
+    background-color: gray;
+    color: white;
+}
+
+a[href="cart.jsp"]:hover {
+    background-color: #444;
+}
+
+/* Divider */
+hr {
+    width: 80%;
+    margin: 20px auto;
+}
