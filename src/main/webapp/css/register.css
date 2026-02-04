@@ -1,159 +1,55 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 29-Jan-2026, 11:53:16 am
-    Author     : root
-*/
-
 /* =========================
-   REGISTER PAGE STYLES
-   File: register.css
+   TWO SECTION FORM LAYOUT
 ========================= */
 
-/* Page background */
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #f4f6f8, #e9ecef);
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    color: #333;
+.form-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
 }
 
-/* =========================
-   REGISTER CONTAINER
-========================= */
-.login-box {
-    width: 420px;
-    background-color: #ffffff;
-    margin: 60px auto;
-    padding: 30px 35px;
-    border-radius: 10px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-    animation: fadeIn 0.6s ease-in-out;
+.form-col {
+    width: 48%;
 }
 
-.login-box h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #222;
-    letter-spacing: 0.5px;
-}
-
-/* =========================
-   FORM ELEMENTS
-========================= */
-.login-box label {
-    font-size: 14px;
-    font-weight: 500;
-    display: block;
-    margin-bottom: 6px;
-}
-
-.login-box input[type="text"],
-.login-box input[type="password"],
-.login-box input[type="email"] {
+/* Textarea Styling */
+.login-box textarea {
     width: 100%;
     padding: 10px 12px;
     margin-bottom: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+    resize: none;
     transition: all 0.3s ease;
 }
 
-/* Input focus effect */
-.login-box input:focus {
+.login-box textarea:focus {
     border-color: #28a745;
     box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2);
     outline: none;
 }
 
-/* =========================
-   REGISTER BUTTON
-========================= */
-.login-box input[type="submit"] {
+/* DOB Input */
+.login-box input[type="date"] {
     width: 100%;
-    background-color: #28a745;
-    color: #ffffff;
-    border: none;
-    padding: 11px;
-    font-size: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.login-box input[type="submit"]:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
-}
-
-/* =========================
-   LINKS
-========================= */
-.links {
-    text-align: center;
-    margin-top: 18px;
-}
-
-.links a {
-    font-size: 14px;
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.links a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-/* =========================
-   MESSAGES
-========================= */
-.error {
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 10px;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-    margin-bottom: 15px;
-    text-align: center;
 }
 
 /* =========================
-   CAPTCHA FIELD HIGHLIGHT
+   RESPONSIVE: STACK COLUMNS
 ========================= */
-.login-box label:last-of-type {
-    font-weight: 600;
-    color: #dc3545;
-}
 
-/* =========================
-   ANIMATION
-========================= */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 480px) {
-    .login-box {
-        width: 92%;
-        margin: 40px auto;
-        padding: 25px;
+    .form-col {
+        width: 100%;
     }
 }

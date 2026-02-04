@@ -1,6 +1,6 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java
  */
 package model;
 
@@ -9,17 +9,24 @@ package model;
  * @author root
  */
 public class User {
+
     private int userId;
     private String username;
     private String loginId;
     private String password;
     private String email;
     private String phone;
+
     private String address;
     private String city;
     private String state;
     private String country;
     private String pin;
+
+    // ✅ New Field Added
+    private String dob;
+
+    // ---------------- GETTERS & SETTERS ----------------
 
     public int getUserId() {
         return userId;
@@ -107,5 +114,14 @@ public class User {
     
     public void setPin(String pin) {
         this.pin = pin;
+    }
+
+    // ✅ DOB Getter & Setter
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 }

@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="util.CaptchaUtil"%>
+
 <%
     // Generate CAPTCHA number
     int captcha = CaptchaUtil.generateCaptcha();
@@ -14,58 +15,96 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Register | Fashion Store</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-         <link rel="stylesheet" type="text/css" href="css/register.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Fashion Store</title>
 
-        <div class="login-box">
-            <h2>User Registration</h2>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
 
-            <%-- Show messages --%>
-            <%
-                String error = request.getParameter("error");
-                if ("captcha".equals(error)) {
-            %>
-                <div class="error">CAPTCHA incorrect. Try again.</div>
-            <%
-                } else if ("failed".equals(error)) {
-            %>
-                <div class="error">Registration failed. Try again.</div>
-            <%
-                }
-            %>
+<body>
 
-            <form action="RegisterServlet" method="post">
-                <label>Name</label>
-                <input type="text" name="username" required>
+<div class="login-box">
+    <h2>User Registration</h2>
 
-                <label>Login ID</label>
-                <input type="text" name="loginId" required>
+    <%-- Show messages --%>
+    <%
+        String error = request.getParameter("error");
+        if ("captcha".equals(error)) {
+    %>
+        <div class="error">CAPTCHA incorrect. Try again.</div>
+    <%
+        } else if ("failed".equals(error)) {
+    %>
+        <div class="error">Registration failed. Try again.</div>
+    <%
+        }
+    %>
 
-                <label>Password</label>
-                <input type="password" name="password" required>
+    <form action="RegisterServlet" method="post">
 
-                <label>Email</label>
-                <input type="email" name="email" required>
+    <div class="form-row">
 
-                <label>Phone</label>
-                <input type="text" name="phone" required>
+        <!-- LEFT SECTION -->
+        <div class="form-col">
 
-                <label>CAPTCHA: What is <%= captcha %> ?</label>
-                <input type="text" name="captcha" required>
+            <label>Name</label>
+            <input type="text" name="username" required>
 
-                <input type="submit" value="Register">
-            </form>
+            <label>Login ID</label>
+            <input type="text" name="loginId" required>
 
-            <div class="links">
-                <a href="login.jsp">Already have an account? Login</a>
-            </div>
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Phone</label>
+            <input type="text" name="phone" required>
+
         </div>
 
-    </body>
-</html>
 
+        <!-- RIGHT SECTION -->
+        <div class="form-col">
+
+            <label>Address</label>
+            <textarea name="address" rows="3" required></textarea>
+
+            <label>City</label>
+            <input type="text" name="city" required>
+
+            <label>State</label>
+            <input type="text" name="state" required>
+
+            <label>Country</label>
+            <input type="text" name="country" required>
+
+            <label>Pin Code</label>
+            <input type="text" name="pin" required>
+
+            <label>Date of Birth</label>
+            <input type="date" name="dob" required>
+
+        </div>
+
+    </div>
+
+    <!-- CAPTCHA -->
+    <label>CAPTCHA: What is <%= captcha %> ?</label>
+    <input type="text" name="captcha" required>
+
+    <input type="submit" value="Register">
+
+</form>
+
+
+    <div class="links">
+        <a href="login.jsp">Already have an account? Login</a>
+    </div>
+</div>
+
+</body>
+</html>
